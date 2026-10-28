@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-ivory: #FAF7F3;
+  --color-cream: #F2EBE5;
+  --color-blush: #E8C9C4;
+  --color-rose: #C99B95;
+  --color-gold: #B49A70;
+  --color-charcoal: #342C29;
+  --color-taupe: #82756F;
+  --color-border: #E6DCD5;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color: var(--color-charcoal);
+    background-color: var(--color-ivory);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: #E8C9C4;
+    color: #342C29;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #FAF7F3;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #D9CBC3;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #C99B95;
+  }
+}
+
+/* Luxury decorative hairline */
+.gold-hairline {
+  background: linear-gradient(90deg, transparent 0%, #B49A70 50%, transparent 100%);
+}
+
+.rose-hairline {
+  background: linear-gradient(90deg, transparent 0%, #C99B95 50%, transparent 100%);
+}
+
+/* Subtle image shimmer animation */
+@keyframes softPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.96; }
+}
+
+.animate-soft-pulse {
+  animation: softPulse 4s ease-in-out infinite;
+}
+
+/* Accessible focus ring */
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid #C99B95;
+  outline-offset: 2px;
+}
