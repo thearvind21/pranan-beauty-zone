@@ -1,6 +1,6 @@
 # PRANAN BEAUTY ZONE — Women's Beauty Parlour
 
-A website built for **Pranan Beauty Zone**, exclusively serving women. Designed with an **Elevated Quiet Luxury** aesthetic, combining editorial typography, refined warm neutral palettes, an interactive appointment booking flow, and responsive craft.
+A refined, high-performance web experience built for **Pranan Beauty Zone**, an exclusive beauty parlour for women. Designed with an **Elevated Quiet Luxury** aesthetic, combining editorial serif typography, warm neutral palettes, an interactive appointment booking flow, and responsive craft.
 
 ---
 
@@ -9,7 +9,7 @@ A website built for **Pranan Beauty Zone**, exclusively serving women. Designed 
 - **Business Name**: Pranan Beauty Zone
 - **Business Category**: Women's Beauty Parlour
 - **Tagline**: *Your Beauty, Your Moment.*
-- **Visual Direction**: Elevated Quiet Luxury, editorial split-screen hero, warm ivory backgrounds, dusty rose accents, and subtle champagne-gold details.
+- **Visual Direction**: Elevated Quiet Luxury, split-screen editorial hero, warm ivory backgrounds, dusty rose accents, and subtle champagne-gold details.
 - **Language**: 100% Professional English throughout.
 - **Currency**: Indian Rupees (₹) with clear formatting.
 
@@ -70,41 +70,65 @@ A website built for **Pranan Beauty Zone**, exclusively serving women. Designed 
 
 ## ✦ Key Sections & Features
 
-1. **Slim Dusty-Rose Announcement Bar**: Welcoming greeting with direct appointment link.
-2. **Refined Navigation**: `Pranan Beauty Zone` wordmark, `Women's Beauty Parlour` descriptor, and Book Appointment button.
-3. **Split-Screen Hero**:
+1. **Redesigned Header**: Refined typographic wordmark (`Pranan` / `BEAUTY ZONE` / `Women's Beauty Parlour`) with balanced navigation and an appointment action.
+2. **Split-Screen Hero**:
    - Eyebrow: `PRANAN BEAUTY ZONE`
    - Headline: *"Your Beauty, Your Moment."*
-   - Supporting text, dual CTAs, and supporting line: *"Personalised Care · Beauty Services · A Moment for You"*.
-   - Editorial photography with soft neutral styling.
+   - Supporting sentence: *"Discover a welcoming beauty experience designed around your personal style, self-care, and confidence."*
+   - Actions: `Book an Appointment` and `Explore Services`.
+3. **Our Beauty Services & Prices**: Displayed before booking so visitors can explore offerings. Features signature spotlight cards and a full price-list menu with direct booking triggers.
 4. **Interactive Appointment Booking**:
    - Heading: *"Plan Your Beauty Appointment"*
-   - Dynamic service selector populated with all 32 services with their exact price.
-   - Selected price display highlight card.
-   - 14-day date selector, compact time slots, contact details, and validation.
-   - Booking request confirmation with reference code and direct WhatsApp link.
-5. **Our Beauty Services**:
-   - Category navigation tabs.
-   - Featured photography spotlight cards for signature treatments.
-   - Clean, elegant price-list menu for all 32 services with dotted leader lines, exact INR prices, and instant booking actions.
-6. **Our Specialists**: Circular portraits, specialisations, and visit request links.
-7. **About Pranan Beauty Zone**: Sanctuary philosophy, clean standards, and personalized care.
-8. **Parlour Gallery**: Accessible lightbox modal with category filters and keyboard navigation (`Esc`, `Arrow` keys).
-9. **Client Testimonials**: Verified feedback quotes.
-10. **Appointment CTA & WhatsApp Desk**: Direct conversion buttons with prefilled English enquiry message.
-11. **Contact & Location**: Address, opening hours, contact form, and floating parlour concierge.
+   - Dynamic service dropdown with all 32 services and prices.
+   - 14-day date strip, time slot grid, contact form, validation, and demo confirmation summary with a direct WhatsApp action.
+5. **Beauty Specialists**: Circular portraits with clear demonstration notices.
+6. **About Pranan Beauty Zone**: Dedicated women-only parlour philosophy, hygienic standards, and attentive care.
+7. **Parlour Gallery**: Editorial photography with keyboard-accessible full-screen lightbox (`Esc` and arrow keys).
+8. **Client Testimonials**: Editorial client feedback cards.
+9. **Final Appointment CTA & WhatsApp Desk**: Direct conversion action with prefilled English enquiry message.
+10. **Contact & Footer**: Hours, suite details, inquiry form, and floating parlour desk.
 
 ---
 
-## ✦ Getting Started
+## ✦ Prerequisites & Local Setup
 
-### Development
+### Prerequisites
+- [Node.js](https://nodejs.org/) v18.17+ or v20+
+- npm (bundled with Node.js)
+
+### Installation
 ```bash
+# Clone the repository
+git clone https://github.com/thearvind21/pranan-beauty-zone.git
+cd pranan-beauty-zone
+
+# Install dependencies
+npm install
+```
+
+### Running Locally
+```bash
+# Start the development server
 npm run dev
 ```
+Open [http://localhost:3000](http://localhost:3000) to view the website.
 
 ### Production Build
 ```bash
+# Create an optimized production build
 npm run build
+
+# Start the production server
 npm run start
 ```
+
+---
+
+## ✦ Tech Stack
+
+- **Framework**: [Next.js 14](https://nextjs.org/) (App Router)
+- **UI Library**: [React 18](https://react.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Fonts**: Google Fonts (`Cormorant Garamond` & `DM Sans` via `next/font`)
