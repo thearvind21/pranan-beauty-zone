@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { ArrowRight, Sparkles, ShieldCheck } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { BRAND } from "@/data/salonData";
 
 interface HeroSectionProps {
@@ -16,12 +16,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 }) => {
   return (
     <section
-      aria-label="Welcome to Maison Belle"
+      aria-label="Welcome to Pranan Beauty Zone"
       className="relative bg-ivory overflow-hidden border-b border-[#E6DCD5]/60"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 lg:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center min-h-[500px] lg:min-h-[560px]">
-          {/* Left Column: 46% width on large screens (col-span-5 or 5.5 of 12) */}
+          {/* Left Column: 46% width on large screens */}
           <div className="lg:col-span-5 xl:col-span-5 flex flex-col justify-center space-y-6 lg:space-y-7 z-10">
             {/* Small uppercase eyebrow */}
             <div className="inline-flex items-center gap-2">
@@ -33,9 +33,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
             {/* Main headline with elegant serif breaks */}
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-[3.25rem] xl:text-[3.65rem] leading-[1.12] text-charcoal font-normal tracking-tight">
-              Quiet luxury <br className="hidden sm:inline" />
-              <span className="italic font-light text-[#8A6762]">for every kind</span> <br />
-              of beauty.
+              Your Beauty, <br className="hidden sm:inline" />
+              <span className="italic font-light text-[#8A6762]">Your Moment.</span>
             </h1>
 
             {/* Supporting paragraph */}
@@ -49,7 +48,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 onClick={onBookClick}
                 className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#C99B95] text-white text-xs tracking-[0.16em] uppercase font-medium shadow-sm hover:bg-[#B68882] transition-all duration-200 hover:shadow-md hover:-translate-y-0.5"
               >
-                <span>Book Your Appointment</span>
+                <span>Book an Appointment</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </button>
 
@@ -67,14 +66,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 <span className="inline-block w-1.5 h-1.5 rounded-full bg-gold/70" />
                 <span>Personalised Care</span>
                 <span className="text-[#C99B95]">•</span>
-                <span>Thoughtful Rituals</span>
+                <span>Beauty Services</span>
                 <span className="text-[#C99B95]">•</span>
-                <span>A Space Just for Women</span>
+                <span>A Moment for You</span>
               </p>
             </div>
           </div>
 
-          {/* Right Column: 54% width on large screens (col-span-7) */}
+          {/* Right Column: 54% width on large screens */}
           <div className="lg:col-span-7 xl:col-span-7 relative w-full h-[360px] sm:h-[460px] md:h-[520px] lg:h-[560px]">
             {/* Elegant framing border behind image */}
             <div className="absolute inset-0 translate-x-2 translate-y-2 md:translate-x-3 md:translate-y-3 rounded-2xl border border-gold/30 bg-cream/50 -z-0" />
@@ -82,7 +81,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-subtle border border-[#E6DCD5] bg-cream">
               <Image
                 src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1400&q=85"
-                alt="Portrait of an elegant woman with natural, radiant beauty and styling at Maison Belle"
+                alt="Portrait of an elegant woman with natural, radiant beauty and styling at Pranan Beauty Zone"
                 fill
                 priority
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 55vw, 650px"
@@ -93,7 +92,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full border border-white/60 shadow-sm flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-rose animate-pulse" />
                 <span className="text-[11px] uppercase tracking-widest text-charcoal font-medium">
-                  Private Studio Appointments
+                  Women&apos;s Beauty Parlour
                 </span>
               </div>
             </div>

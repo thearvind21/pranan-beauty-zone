@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Menu, X, Calendar, Sparkles } from "lucide-react";
+import { Menu, X, Calendar } from "lucide-react";
 import { BRAND } from "@/data/salonData";
 
 interface NavbarProps {
@@ -50,13 +50,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onBookClick }) => {
           <a
             href="#"
             className="group flex flex-col items-start focus:outline-none"
-            aria-label="Maison Belle Home"
+            aria-label="Pranan Beauty Zone Home"
           >
-            <span className="font-serif text-2xl sm:text-2xl md:text-3xl tracking-[0.22em] text-charcoal uppercase font-normal transition-colors duration-200 group-hover:text-rose">
+            <span className="font-serif text-2xl sm:text-2xl md:text-3xl tracking-[0.16em] text-charcoal uppercase font-normal transition-colors duration-200 group-hover:text-rose">
               {BRAND.name}
             </span>
-            <span className="text-[9px] tracking-[0.3em] uppercase text-taupe font-medium -mt-0.5">
-              Beauty & Wellness Studio
+            <span className="text-[9px] tracking-[0.26em] uppercase text-taupe font-medium -mt-0.5">
+              {BRAND.descriptor}
             </span>
           </a>
 
@@ -87,7 +87,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onBookClick }) => {
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#C99B95] text-white text-xs tracking-[0.16em] uppercase font-medium shadow-sm hover:bg-[#B68882] transition-all duration-200 hover:shadow hover:-translate-y-0.5 active:translate-y-0"
             >
               <Calendar className="w-3.5 h-3.5" />
-              <span>Book Appointment</span>
+              <span>Book an Appointment</span>
             </button>
           </div>
 
@@ -138,7 +138,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onBookClick }) => {
                 className="w-full flex items-center justify-center gap-2 py-3 rounded-full bg-[#C99B95] text-white text-xs tracking-widest uppercase font-medium shadow-sm hover:bg-[#B68882]"
               >
                 <Calendar className="w-4 h-4" />
-                <span>Book Your Appointment</span>
+                <span>Book an Appointment</span>
               </button>
             </div>
           </nav>

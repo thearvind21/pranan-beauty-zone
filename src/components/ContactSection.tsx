@@ -35,7 +35,7 @@ export const ContactSection: React.FC = () => {
       return;
     }
     if (!phone.trim()) {
-      setErrorMessage("Please enter your contact number or WhatsApp.");
+      setErrorMessage("Please enter your contact or WhatsApp number.");
       return;
     }
 
@@ -68,24 +68,24 @@ export const ContactSection: React.FC = () => {
           </h2>
 
           <p className="mt-3.5 text-sm sm:text-base text-taupe leading-relaxed">
-            Have questions about our rituals or wish to coordinate a private appointment? Connect directly with our concierge.
+            Have questions regarding our treatments or wish to coordinate your visit? Reach out directly to Pranan Beauty Zone.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
-          {/* Left Column: Salon Information & Hours (5 cols) */}
+          {/* Left Column: Parlour Information & Hours (5 cols) */}
           <div className="lg:col-span-5 space-y-8">
-            {/* Salon Details Box */}
+            {/* Parlour Details Box */}
             <div className="bg-cream/40 rounded-3xl p-7 border border-[#E6DCD5] space-y-6">
               <h3 className="font-serif text-2xl text-charcoal">
-                Studio Details
+                Parlour Details
               </h3>
 
               <div className="space-y-4 text-xs sm:text-sm">
                 <div className="flex items-start gap-3.5">
                   <MapPin className="w-4 h-4 text-gold flex-shrink-0 mt-0.5" />
                   <div>
-                    <p className="font-medium text-charcoal">Studio Address</p>
+                    <p className="font-medium text-charcoal">Location</p>
                     <p className="text-taupe mt-0.5">{BRAND.contact.address}</p>
                     <p className="text-taupe">{BRAND.contact.cityState}</p>
                   </div>
@@ -94,12 +94,12 @@ export const ContactSection: React.FC = () => {
                 <div className="flex items-start gap-3.5">
                   <Phone className="w-4 h-4 text-gold flex-shrink-0 mt-0.5" />
                   <div>
-                    <p className="font-medium text-charcoal">Direct Concierge</p>
+                    <p className="font-medium text-charcoal">Direct Phone</p>
                     <a
                       href={`tel:${BRAND.contact.phone}`}
                       className="text-taupe hover:text-rose transition-colors"
                     >
-                      {BRAND.contact.phone}
+                      {BRAND.contact.phoneDisplay}
                     </a>
                   </div>
                 </div>
@@ -109,12 +109,14 @@ export const ContactSection: React.FC = () => {
                   <div>
                     <p className="font-medium text-charcoal">WhatsApp Direct</p>
                     <a
-                      href={`https://wa.me/?text=Hello%20Maison%20Belle`}
+                      href={`https://wa.me/${BRAND.contact.whatsapp}?text=${encodeURIComponent(
+                        "Hello Pranan Beauty Zone, I would like to enquire about your beauty services and book an appointment."
+                      )}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-taupe hover:text-rose transition-colors"
                     >
-                      {BRAND.contact.whatsapp}
+                      {BRAND.contact.phoneDisplay}
                     </a>
                   </div>
                 </div>
@@ -138,7 +140,7 @@ export const ContactSection: React.FC = () => {
                 <div className="flex items-center gap-2">
                   <Clock className="w-4 h-4 text-gold" />
                   <span className="text-xs uppercase tracking-wider font-medium text-charcoal">
-                    Salon Hours
+                    Parlour Hours
                   </span>
                 </div>
                 <div className="space-y-1.5 text-xs">
@@ -152,14 +154,14 @@ export const ContactSection: React.FC = () => {
               </div>
             </div>
 
-            {/* Quiet studio amenities note */}
+            {/* Parlour amenities note */}
             <div className="p-5 rounded-2xl bg-ivory border border-[#E6DCD5] space-y-2">
               <span className="text-[11px] uppercase tracking-widest text-gold font-semibold flex items-center gap-1.5">
                 <Sparkles className="w-3.5 h-3.5" />
-                <span>Guest Amenities</span>
+                <span>Comfort & Hygiene</span>
               </span>
               <p className="text-xs text-taupe leading-relaxed">
-                Complimentary underground valet parking, private waiting lounge, organic botanical refreshments, and high-speed Wi-Fi provided.
+                A clean, welcoming environment exclusively for women, using quality products and sterilized tools for every treatment.
               </p>
             </div>
           </div>
@@ -172,7 +174,7 @@ export const ContactSection: React.FC = () => {
                   Send an Enquiry
                 </h3>
                 <p className="text-xs sm:text-sm text-taupe mt-1">
-                  Leave your details and preferences. Our concierge responds promptly within studio hours.
+                  Leave your details and treatment preferences. Our team will get in touch promptly during working hours.
                 </p>
               </div>
 
@@ -185,7 +187,7 @@ export const ContactSection: React.FC = () => {
                     Message Received
                   </h4>
                   <p className="text-xs sm:text-sm text-taupe max-w-sm mx-auto">
-                    Thank you, {name}. Your demonstration enquiry has been registered. For real deployment, this connects to your salon's email or CRM.
+                    Thank you, {name}. Your demonstration enquiry for Pranan Beauty Zone has been registered.
                   </p>
                   <button
                     onClick={() => {
@@ -211,21 +213,21 @@ export const ContactSection: React.FC = () => {
                         required
                         value={name}
                         onChange={(e) => setName(e.target.value)}
-                        placeholder="e.g. Charlotte Dubois"
+                        placeholder="e.g. Anjali Gupta"
                         className="w-full px-4 py-2.5 rounded-xl border border-[#E6DCD5] bg-ivory/50 text-xs sm:text-sm text-charcoal placeholder-taupe/40 focus:border-rose focus:ring-1 focus:ring-rose"
                       />
                     </div>
 
                     <div>
                       <label className="block text-[11px] uppercase tracking-wider text-taupe mb-1 font-medium">
-                        Contact Number / WhatsApp *
+                        Contact / WhatsApp Number *
                       </label>
                       <input
                         type="tel"
                         required
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
-                        placeholder="+1 (555) 012-3456"
+                        placeholder="e.g. +91 98765 43210"
                         className="w-full px-4 py-2.5 rounded-xl border border-[#E6DCD5] bg-ivory/50 text-xs sm:text-sm text-charcoal placeholder-taupe/40 focus:border-rose focus:ring-1 focus:ring-rose"
                       />
                     </div>
@@ -238,14 +240,16 @@ export const ContactSection: React.FC = () => {
                     <select
                       value={service}
                       onChange={(e) => setService(e.target.value)}
-                      className="w-full px-4 py-2.5 rounded-xl border border-[#E6DCD5] bg-ivory/50 text-xs sm:text-sm text-charcoal focus:border-rose focus:ring-1 focus:ring-rose"
+                      className="w-full px-4 py-2.5 rounded-xl border border-[#E6DCD5] bg-ivory/50 text-xs sm:text-sm text-charcoal focus:border-rose focus:ring-1 focus:ring-rose cursor-pointer"
                     >
                       {SERVICES.map((s) => (
                         <option key={s.id} value={s.name}>
-                          {s.name} ({s.duration})
+                          {s.name} — {s.price}
                         </option>
                       ))}
-                      <option value="Custom Consultation">Custom Consultation / Multiple Services</option>
+                      <option value="Multiple Services / Custom Consultation">
+                        Multiple Services / Consultation
+                      </option>
                     </select>
                   </div>
 
@@ -272,9 +276,9 @@ export const ContactSection: React.FC = () => {
                         className="w-full px-4 py-2.5 rounded-xl border border-[#E6DCD5] bg-ivory/50 text-xs sm:text-sm text-charcoal focus:border-rose focus:ring-1 focus:ring-rose"
                       >
                         <option value="">Any time available</option>
-                        <option value="Morning (9:30 AM - 12:00 PM)">Morning (9:30 AM - 12:00 PM)</option>
-                        <option value="Afternoon (12:00 PM - 4:00 PM)">Afternoon (12:00 PM - 4:00 PM)</option>
-                        <option value="Evening (4:00 PM - 7:30 PM)">Evening (4:00 PM - 7:30 PM)</option>
+                        <option value="Morning (10:00 AM - 01:00 PM)">Morning (10:00 AM - 01:00 PM)</option>
+                        <option value="Afternoon (01:00 PM - 05:00 PM)">Afternoon (01:00 PM - 05:00 PM)</option>
+                        <option value="Evening (05:00 PM - 08:00 PM)">Evening (05:00 PM - 08:00 PM)</option>
                       </select>
                     </div>
                   </div>
@@ -287,7 +291,7 @@ export const ContactSection: React.FC = () => {
                       rows={3}
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
-                      placeholder="Share any special preferences, bridal considerations, or questions..."
+                      placeholder="Share any special preferences, skin considerations, or questions..."
                       className="w-full px-4 py-2.5 rounded-xl border border-[#E6DCD5] bg-ivory/50 text-xs sm:text-sm text-charcoal placeholder-taupe/40 focus:border-rose focus:ring-1 focus:ring-rose resize-none"
                     />
                   </div>
@@ -312,7 +316,7 @@ export const ContactSection: React.FC = () => {
                     ) : (
                       <>
                         <Send className="w-3.5 h-3.5" />
-                        <span>Send Salon Message</span>
+                        <span>Send Parlour Message</span>
                       </>
                     )}
                   </button>

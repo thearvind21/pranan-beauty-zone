@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { Sparkles, HeartHandshake, Shield, Leaf, ArrowRight } from "lucide-react";
+import { Sparkles, HeartHandshake, Shield, Sparkle, ArrowRight } from "lucide-react";
 import { BRAND } from "@/data/salonData";
 
 interface AboutSectionProps {
@@ -13,7 +13,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onExploreServices })
   return (
     <section
       id="about"
-      aria-label="About Maison Belle"
+      aria-label="About Pranan Beauty Zone"
       className="py-16 sm:py-24 bg-ivory border-b border-[#E6DCD5]/70 scroll-mt-16"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -23,7 +23,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onExploreServices })
             <div className="relative h-[380px] sm:h-[480px] lg:h-[540px] rounded-3xl overflow-hidden shadow-subtle border border-[#E6DCD5] bg-cream">
               <Image
                 src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1200&q=80"
-                alt="Tranquil and elegant interior of Maison Belle salon suite"
+                alt="Tranquil and elegant interior of Pranan Beauty Zone parlour suite"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover object-center"
@@ -35,11 +35,11 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onExploreServices })
                 <div className="flex items-center gap-2 mb-1">
                   <Sparkles className="w-4 h-4 text-gold" />
                   <span className="text-[11px] uppercase tracking-widest text-charcoal font-semibold">
-                    The Sanctuary Philosophy
+                    The Women&apos;s Sanctuary
                   </span>
                 </div>
                 <p className="text-xs text-taupe leading-relaxed">
-                  Private suites, soothing aromatherapy, and intentional scheduling to ensure you are never rushed.
+                  Clean suites, gentle beauty rituals, and comfortable unhurried sessions tailored to your schedule.
                 </p>
               </div>
             </div>
@@ -74,23 +74,23 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onExploreServices })
                 <Shield className="w-4 h-4 text-gold" />
                 <h3 className="font-serif text-base text-charcoal">Space for Women</h3>
                 <p className="text-[11px] text-taupe leading-normal">
-                  A sanctuary dedicated solely to female comfort and peace.
+                  A comfortable parlour dedicated purely to women&apos;s wellness and personal care.
                 </p>
               </div>
 
               <div className="p-4 rounded-2xl bg-cream/50 border border-[#E6DCD5]/80 space-y-1.5">
-                <Leaf className="w-4 h-4 text-gold" />
-                <h3 className="font-serif text-base text-charcoal">Clean Formulations</h3>
+                <Sparkle className="w-4 h-4 text-gold" />
+                <h3 className="font-serif text-base text-charcoal">Quality Care</h3>
                 <p className="text-[11px] text-taupe leading-normal">
-                  Organic, cruelty-free, and dermatologically vetted treatments.
+                  Trusted skincare brands, hygienic wax, and nourishing hair formulations.
                 </p>
               </div>
 
               <div className="p-4 rounded-2xl bg-cream/50 border border-[#E6DCD5]/80 space-y-1.5">
                 <HeartHandshake className="w-4 h-4 text-gold" />
-                <h3 className="font-serif text-base text-charcoal">Attentive Care</h3>
+                <h3 className="font-serif text-base text-charcoal">Attentive Service</h3>
                 <p className="text-[11px] text-taupe leading-normal">
-                  In-depth consultations shaped around your unique lifestyle.
+                  Warm, personalized attention to understand your skin and style preferences.
                 </p>
               </div>
             </div>
@@ -101,7 +101,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onExploreServices })
                 href="#booking"
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#C99B95] text-white text-xs tracking-widest uppercase font-medium hover:bg-[#B68882] shadow-sm transition-all duration-200"
               >
-                <span>Experience Our Studio</span>
+                <span>Experience Our Parlour</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </a>
 
@@ -109,7 +109,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onExploreServices })
                 href="#contact"
                 className="text-xs uppercase tracking-widest text-charcoal font-semibold hover:text-rose transition-colors border-b border-charcoal/30 pb-0.5 hover:border-rose"
               >
-                Inquire With Our Concierge
+                Inquire With Our Team
               </a>
             </div>
           </div>

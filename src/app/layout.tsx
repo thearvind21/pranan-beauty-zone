@@ -17,19 +17,22 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "MAISON BELLE | Women's Beauty & Wellness Studio",
+  title: "Pranan Beauty Zone | Women's Beauty Parlour",
   description:
-    "Quiet luxury for every kind of beauty. A bespoke sanctuary exclusively for women featuring tailored hair styling, skin wellness rituals, and editorial beauty care.",
+    "Your Beauty, Your Moment. Discover a welcoming women's beauty parlour offering expert facials, grooming, waxing, hair spas, and mehendi in a relaxing atmosphere.",
   keywords: [
-    "luxury beauty salon",
+    "Pranan Beauty Zone",
     "women beauty parlour",
-    "boutique salon",
-    "hair styling",
-    "skincare facials",
-    "bridal beauty",
-    "quiet luxury",
+    "facials",
+    "hydra facial",
+    "bridal facial",
+    "hair spa",
+    "eyebrow shaping",
+    "waxing",
+    "mehendi",
+    "pedicure manicure",
   ],
-  authors: [{ name: "Maison Belle" }],
+  authors: [{ name: "Pranan Beauty Zone" }],
 };
 
 export const viewport: Viewport = {

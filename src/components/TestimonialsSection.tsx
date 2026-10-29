@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Star, Sparkles } from "lucide-react";
+import { Star } from "lucide-react";
 import { BRAND, TESTIMONIALS } from "@/data/salonData";
 
 export const TestimonialsSection: React.FC = () => {
@@ -26,7 +26,7 @@ export const TestimonialsSection: React.FC = () => {
           </h2>
 
           <p className="mt-3.5 text-sm sm:text-base text-taupe leading-relaxed">
-            Reflections from women who have made Maison Belle their personal ritual of wellness and care.
+            Reflections from women who have experienced the thoughtful care and welcoming treatments at Pranan Beauty Zone.
           </p>
 
           <p className="mt-2 text-[11px] uppercase tracking-widest text-taupe/70 font-medium">

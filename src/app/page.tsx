@@ -16,7 +16,7 @@ import { Footer } from "@/components/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 
 export default function Home() {
-  const [selectedServiceId, setSelectedServiceId] = useState<string>("hair-styling");
+  const [selectedServiceId, setSelectedServiceId] = useState<string>("3d-facial");
 
   const scrollToBooking = () => {
     const el = document.getElementById("booking");

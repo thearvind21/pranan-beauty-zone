@@ -11,7 +11,7 @@ export const GallerySection: React.FC = () => {
   const [lightboxOpen, setLightboxOpen] = useState<boolean>(false);
   const [activeImageIndex, setActiveImageIndex] = useState<number>(0);
 
-  const categories = ["All", "Interiors", "Hair Styling", "Skincare", "Makeup", "Bridal"];
+  const categories = ["All", "Interiors", "Facials", "Hair Care", "Manicure & Pedicure", "Mehendi"];
 
   const filteredItems =
     selectedCategory === "All"
@@ -26,7 +26,7 @@ export const GallerySection: React.FC = () => {
   return (
     <section
       id="gallery"
-      aria-label="Salon Gallery"
+      aria-label="Parlour Gallery"
       className="py-16 sm:py-24 bg-cream/25 border-b border-[#E6DCD5]/70 scroll-mt-16"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -35,17 +35,17 @@ export const GallerySection: React.FC = () => {
           <div className="inline-flex items-center gap-2 mb-3">
             <span className="w-5 h-[1px] bg-gold" />
             <p className="text-[11px] sm:text-xs font-semibold tracking-[0.24em] text-rose uppercase">
-              STUDIO ATMOSPHERE
+              PRANAN BEAUTY ZONE GALLERY
             </p>
             <span className="w-5 h-[1px] bg-gold" />
           </div>
 
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-charcoal font-normal tracking-tight">
-            The Maison Experience
+            Beauty in Every Detail
           </h2>
 
           <p className="mt-3.5 text-sm sm:text-base text-taupe leading-relaxed">
-            A visual curation of our tranquil suites, refined artistry, and thoughtful beauty rituals.
+            A visual glimpse into our relaxing treatments, hair rituals, skin therapies, and festive mehendi care.
           </p>
 
           {/* Category Tabs */}
@@ -66,7 +66,7 @@ export const GallerySection: React.FC = () => {
           </div>
         </div>
 
-        {/* Editorial Masonry/Grid Layout */}
+        {/* Editorial Grid Layout */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredItems.map((item, index) => (
             <div
@@ -114,7 +114,7 @@ export const GallerySection: React.FC = () => {
 
         {/* Photography note */}
         <p className="mt-8 text-center text-[11px] text-taupe/80 uppercase tracking-widest font-light">
-          (Demonstration gallery photography · Authentic salon imagery will be placed upon client provision)
+          (Demonstration gallery photography · Authentic parlour imagery will be updated upon client provision)
         </p>
 
         {/* Lightbox component */}

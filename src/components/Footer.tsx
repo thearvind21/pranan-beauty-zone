@@ -9,6 +9,16 @@ export const Footer: React.FC = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const featuredFooterServices = [
+    "Hydra Facial",
+    "Bridal Facial",
+    "Full Hand D-Tan Waxing",
+    "Full Leg D-Tan Waxing",
+    "Manicure and Pedicure Combo",
+    "L'Oréal Hair Spa",
+    "Mehendi Application",
+  ];
+
   return (
     <footer className="bg-[#F2EBE5] border-t border-[#E6DCD5] text-charcoal pt-14 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,7 +26,7 @@ export const Footer: React.FC = () => {
           {/* Brand Col (4 cols) */}
           <div className="lg:col-span-4 space-y-4">
             <div>
-              <span className="font-serif text-2xl tracking-[0.22em] text-charcoal uppercase font-normal">
+              <span className="font-serif text-2xl tracking-[0.16em] text-charcoal uppercase font-normal">
                 {BRAND.name}
               </span>
               <p className="text-[10px] tracking-[0.25em] uppercase text-taupe font-medium">
@@ -25,8 +35,8 @@ export const Footer: React.FC = () => {
             </div>
 
             <p className="text-xs sm:text-sm text-taupe leading-relaxed max-w-sm">
-              &ldquo;A more thoughtful approach to beauty and self-care.&rdquo;
-              A tranquil haven crafted exclusively for women to pause, refresh, and experience tailored beauty rituals.
+              &ldquo;Your Beauty, Your Moment.&rdquo;
+              A welcoming beauty sanctuary dedicated exclusively to women. Professional facials, grooming, waxing, hair care, and mehendi crafted around your personal style.
             </p>
 
             <div className="flex items-center space-x-3 pt-2">
@@ -41,7 +51,9 @@ export const Footer: React.FC = () => {
               </a>
 
               <a
-                href={`https://wa.me/?text=Hello%20Maison%20Belle`}
+                href={`https://wa.me/${BRAND.contact.whatsapp}?text=${encodeURIComponent(
+                  "Hello Pranan Beauty Zone, I would like to enquire about your beauty services and book an appointment."
+                )}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-white border border-[#E6DCD5] flex items-center justify-center text-charcoal hover:text-rose hover:border-rose transition-all duration-200"
@@ -68,12 +80,12 @@ export const Footer: React.FC = () => {
             <ul className="space-y-2 text-xs text-taupe">
               <li>
                 <a href="#services" className="hover:text-rose transition-colors">
-                  Signature Rituals
+                  Beauty Services
                 </a>
               </li>
               <li>
                 <a href="#booking" className="hover:text-rose transition-colors">
-                  Reserve Visit
+                  Book Appointment
                 </a>
               </li>
               <li>
@@ -83,32 +95,32 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <a href="#about" className="hover:text-rose transition-colors">
-                  Studio Philosophy
+                  About the Parlour
                 </a>
               </li>
               <li>
                 <a href="#gallery" className="hover:text-rose transition-colors">
-                  Visual Gallery
+                  Parlour Gallery
                 </a>
               </li>
               <li>
                 <a href="#contact" className="hover:text-rose transition-colors">
-                  Concierge Desk
+                  Contact Us
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Services (3 cols) */}
+          {/* Featured Services (3 cols) */}
           <div className="lg:col-span-3 space-y-3">
             <p className="text-xs uppercase tracking-[0.2em] font-semibold text-charcoal">
-              Rituals
+              Popular Treatments
             </p>
             <ul className="space-y-2 text-xs text-taupe">
-              {SERVICES.map((s) => (
-                <li key={s.id}>
+              {featuredFooterServices.map((name) => (
+                <li key={name}>
                   <a href="#services" className="hover:text-rose transition-colors">
-                    {s.name}
+                    {name}
                   </a>
                 </li>
               ))}
@@ -118,21 +130,21 @@ export const Footer: React.FC = () => {
           {/* Contact (3 cols) */}
           <div className="lg:col-span-3 space-y-3">
             <p className="text-xs uppercase tracking-[0.2em] font-semibold text-charcoal">
-              Studio Suite
+              Parlour Location
             </p>
             <div className="space-y-2 text-xs text-taupe leading-relaxed">
               <p>{BRAND.contact.address}</p>
               <p>{BRAND.contact.cityState}</p>
               <p className="pt-1">
                 <span className="font-medium text-charcoal">Phone: </span>
-                {BRAND.contact.phone}
+                {BRAND.contact.phoneDisplay}
               </p>
               <p>
-                <span className="font-medium text-charcoal">Concierge: </span>
+                <span className="font-medium text-charcoal">Email: </span>
                 {BRAND.contact.email}
               </p>
               <p className="text-[11px] text-gold font-medium pt-1">
-                Tues–Fri: 9am–7:30pm · Sat: 9am–6pm
+                Mon–Sat: 10am–8pm · Sun: 10am–7pm
               </p>
             </div>
           </div>
@@ -141,7 +153,7 @@ export const Footer: React.FC = () => {
         {/* Bottom bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-taupe gap-4">
           <p>
-            © {new Date().getFullYear()} {BRAND.name}. All rights reserved. Built as a luxury demonstration experience.
+            © {new Date().getFullYear()} {BRAND.name}. All rights reserved. Women&apos;s Beauty Parlour.
           </p>
 
           <div className="flex items-center space-x-6">
