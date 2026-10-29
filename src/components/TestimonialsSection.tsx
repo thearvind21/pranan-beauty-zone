@@ -66,8 +66,8 @@ export const TestimonialsSection: React.FC = () => {
                   </p>
                 </div>
 
-                <span className="text-[10px] tracking-wider uppercase px-2.5 py-1 bg-white rounded-full text-gold font-medium border border-[#E6DCD5]">
-                  Verified
+                <span className="text-[10px] tracking-wider uppercase px-2.5 py-1 bg-white/80 rounded-full text-taupe font-medium border border-[#E6DCD5]">
+                  Sample Review
                 </span>
               </div>
             </div>

@@ -124,7 +124,7 @@ export const SERVICES: ServiceItem[] = [
     numericPrice: 2000,
     description: "An intensive luxury glow facial formulated to prep brides and special occasions with luminous, camera-ready skin.",
     isSignature: true,
-    image: "https://images.unsplash.com/photo-1512290900672-1f486d3d685d?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "skin-brightening-facial",

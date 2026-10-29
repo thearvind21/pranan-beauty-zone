@@ -1,11 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
-import { AnnouncementBar } from "@/components/AnnouncementBar";
 import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
-import { BookingSection } from "@/components/BookingSection";
 import { ServicesSection } from "@/components/ServicesSection";
+import { BookingSection } from "@/components/BookingSection";
 import { SpecialistsSection } from "@/components/SpecialistsSection";
 import { AboutSection } from "@/components/AboutSection";
 import { GallerySection } from "@/components/GallerySection";
@@ -43,49 +42,46 @@ export default function Home() {
 
   return (
     <main className="min-h-screen flex flex-col bg-ivory">
-      {/* 1. Slim Dusty-Rose Announcement Bar */}
-      <AnnouncementBar onBookClick={scrollToBooking} />
-
-      {/* 2. Refined Typographic Navigation */}
+      {/* 1. Redesigned Clean Header (Without Generic Announcement Bar) */}
       <Navbar onBookClick={scrollToBooking} />
 
-      {/* 3. Hero Section (Split Screen Editorial) */}
+      {/* 2. Hero Section (Split Screen Editorial) */}
       <HeroSection
         onBookClick={scrollToBooking}
         onExploreServices={scrollToServices}
       />
 
-      {/* 4. Appointment Booking Section (Directly Beneath Hero) */}
+      {/* 3. Services and Prices (Shown First so Visitors Browse Offerings) */}
+      <ServicesSection onSelectService={handleSelectServiceFromCard} />
+
+      {/* 4. Appointment Booking (Directly Beneath Services) */}
       <BookingSection
         selectedServiceId={selectedServiceId}
         onSelectService={(id) => setSelectedServiceId(id)}
       />
 
-      {/* 5. Signature Beauty Services */}
-      <ServicesSection onSelectService={handleSelectServiceFromCard} />
-
-      {/* 6. Beauty Specialists */}
+      {/* 5. Specialists / Team Section (Sample Demonstration Profiles) */}
       <SpecialistsSection onRequestSpecialist={handleRequestSpecialist} />
 
-      {/* 7. About Salon Sanctuary */}
+      {/* 6. About the Parlour */}
       <AboutSection onExploreServices={scrollToServices} />
 
-      {/* 8. Gallery with Accessible Lightbox */}
+      {/* 7. Gallery with Accessible Lightbox */}
       <GallerySection />
 
-      {/* 9. Client Testimonials */}
+      {/* 8. Testimonials */}
       <TestimonialsSection />
 
-      {/* 10. Final Appointment CTA */}
+      {/* 9. Final Appointment Call to Action */}
       <AppointmentCTA onBookClick={scrollToBooking} />
 
-      {/* 11. Contact Section */}
+      {/* 10. Contact Information & Location */}
       <ContactSection />
 
-      {/* 12. Footer */}
+      {/* 11. Footer */}
       <Footer />
 
-      {/* 13. Floating WhatsApp Concierge */}
+      {/* 12. Floating WhatsApp Parlour Concierge */}
       <FloatingWhatsApp />
     </main>
   );
